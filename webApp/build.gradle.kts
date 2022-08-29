@@ -11,7 +11,7 @@ kotlin {
         browser{
             binaries.executable()
             runTask {
-                devServer = devServer?.copy(port = 3000)
+                devServer = devServer?.copy(port = 8080)
             }
             commonWebpackConfig {
                 cssSupport.enabled = true
@@ -40,6 +40,6 @@ kotlin {
 
     }
 }
-rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin::class.java) {
+/*rootProject.plugins.withType(org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin::class.java) {
     rootProject.the<org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension>().versions.webpackDevServer.version = "4.10.0"
-}
+}*/

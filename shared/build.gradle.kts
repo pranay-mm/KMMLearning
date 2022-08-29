@@ -78,7 +78,11 @@ kotlin {
             iosArm64Test.dependsOn(this)
             iosSimulatorArm64Test.dependsOn(this)
         }
-        val jsMain by getting
+        val jsMain by getting{
+            dependencies {
+                implementation(npm("is-online","10.0.0", generateExternals = true))
+            }
+        }
 
     }
 }
